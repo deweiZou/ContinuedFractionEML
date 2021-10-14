@@ -1,0 +1,7 @@
+from sage.plot.line import Line
+var('x y')
+e = sqrt(1-x^2)
+f = line([(-1/2, sqrt(3)/2), (-1/2, 3)])
+g = line([(1/2, sqrt(3)/2), (1/2, 3)])
+t = region_plot( y > sqrt(1-x^2), (x,-1/2,1/2), (y,-2,3), incol='red', bordercol='gray')
+show(plot(e) + g + f + t, aspect_ratio=1)
